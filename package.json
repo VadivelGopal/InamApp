@@ -4,8 +4,10 @@
   "description": "backend",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "vercel-build": "npm run build",
+    "build": "echo 'No build steps required'"
   },
   "author": "",
   "license": "ISC",
