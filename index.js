@@ -135,6 +135,7 @@ const secretKey = generateSecretKey();
 //code to login
 app.post("/signin", async (req, res) => {
   try {
+    console.log("gopal")
     const { identifier, password } = req.body;
 
     // Check if account exists using either email or username
