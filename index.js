@@ -134,7 +134,7 @@ const generateSecretKey = () => {
 const secretKey = generateSecretKey();
 
 //code to login
-app.get("/signin", async (req, res) => {
+app.post("/signin", async (req, res) => {
   try {
     //console.log("gopal")
     const { identifier, password } = req.body;
