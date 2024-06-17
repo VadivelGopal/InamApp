@@ -19,11 +19,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const jwt = require("jsonwebtoken");
 
-const connectionString = "mongodb+srv://gopalarthi2014:ZpAhpWClYp7Vtoiy@inamapp.sgxgwjd.mongodb.net/";
+const connectionString = "mongodb+srv://gopalarthi2014:ZpAhpWClYp7Vtoiy@inamapp.sgxgwjd.mongodb.net/?retryWrites=true&w=majority&appName=InamApp";
 //const dbURI = process.env.MONGODB_URI;
 
-mongoose.connect("mongodb://localhost:27017", {
-//mongoose.connect(connectionString, {
+//mongoose.connect("mongodb://localhost:27017", {
+mongoose.connect(connectionString, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {

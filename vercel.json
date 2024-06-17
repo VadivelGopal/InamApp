@@ -13,7 +13,7 @@
       }
     ],
     "env": {
-      "MONGODB_URI": "mongodb+srv://gopalarthi2014:ZpAhpWClYp7Vtoiy@inamapp.sgxgwjd.mongodb.net/"
+      "MONGODB_URI": "mongodb+srv://gopalarthi2014:ZpAhpWClYp7Vtoiy@inamapp.sgxgwjd.mongodb.net/?retryWrites=true&w=majority&appName=InamApp"
     }
   }
   
