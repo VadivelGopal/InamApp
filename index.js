@@ -19,10 +19,11 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 const jwt = require("jsonwebtoken");
 
-const connectionString = "mongodb+srv://gopalarthi2014:ZpAhpWClYp7Vtoiy@inamapp.sgxgwjd.mongodb.net/";
+//const connectionString = "mongodb+srv://gopalarthi2014:ZpAhpWClYp7Vtoiy@inamapp.sgxgwjd.mongodb.net/";
+const dbURI = process.env.MONGODB_URI;
 
 //mongoose.connect("mongodb://localhost:27017", {
-mongoose.connect(connectionString, {
+mongoose.connect(dbURI, {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 }).then(() => {
@@ -133,9 +134,9 @@ const generateSecretKey = () => {
 const secretKey = generateSecretKey();
 
 //code to login
-app.post("/signin", async (req, res) => {
+app.get("/signin", async (req, res) => {
   try {
-    console.log("gopal")
+    //console.log("gopal")
     const { identifier, password } = req.body;
 
     // Check if account exists using either email or username
